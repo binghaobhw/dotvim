@@ -82,10 +82,10 @@ set number
 " Always show current position
 set ruler
 
-" Show command line
+" Show cmdline
 set showcmd
 " Height of the command line
-set cmdheight=2
+"set cmdheight=2
 
 " A buffer becomes hidden when it is abandoned
 "set hid
@@ -254,7 +254,7 @@ set viminfo^=%
 set laststatus=2
 
 " Format the status line
-set statusline=\ %{HasPaste()}%F%m%r%h\ %w\ \ CWD:\ %r%{getcwd()}%h\ \ \ Line:\ %l
+set statusline=%{HasPaste()}%F%m%r%h\ %w\ \%{getcwd()}\ \ %{fugitive#statusline()}\ \ line:\ %l
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
