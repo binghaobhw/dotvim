@@ -404,3 +404,6 @@ function! <SID>BufcloseCloseIt()
      execute("bdelete! ".l:currentBufNum)
    endif
 endfunction
+" Opening NERDTree with Ctrl+n
+map <C-n> :NERDTreeToggle<CR>
+
