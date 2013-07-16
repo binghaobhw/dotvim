@@ -6,6 +6,8 @@ call pathogen#helptags()
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => General
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Be improved
+set nocompatible
 " Sets how many lines of history VIM has to remember
 set history=2000
 
@@ -18,11 +20,13 @@ set autoread
 
 " With a map leader it's possible to do extra key combinations
 " like <leader>w saves the current file
-let mapleader = ","
-let g:mapleader = ","
+let mapleader = "\\"
+let g:mapleader = "\\"
 
 " Fast saving
 nmap <leader>w :w!<cr>
+" Fast quit
+nmap <leader>q :q<cr>
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -89,19 +93,20 @@ set tm=1000
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Enable syntax highlighting
 syntax enable
-
-colorscheme badwolf
 set background=dark
-
+set t_Co=256
 " Set extra options when running in GUI mode
 if has("gui_running")
+	" colorscheme solarized
+	colorscheme badwolf
     " Exclude toolbar
     set guioptions-=T
     " Add tab pages
     set guioptions+=e
     " Number of colors
-    set t_Co=256
     set guitablabel=%M\ %t
+else
+	colorscheme darkburn
 endif
 
 " Set utf8 as standard encoding and en_US as the standard language
@@ -160,8 +165,8 @@ map j gj
 map k gk
 
 " Map <Space> to / (search) and Ctrl-<Space> to ? (backwards search)
-map <space> /
-map <c-space> ?
+" map <space> /
+" map <c-space> ?
 
 " Disable highlight when <leader><cr> is pressed
 map <silent> <leader><cr> :noh<cr>
@@ -214,7 +219,7 @@ set viminfo^=%
 set laststatus=2
 
 " Format the status line
-set statusline=%{HasPaste()}%F%m%r%h\ %w\ \%{getcwd()}\ \ %{fugitive#statusline()}\ \ line:\ %l
+set statusline=%{HasPaste()}%F%m%r%h\ %w\ \%{getcwd()}\ \ %{fugitive#statusline()}\ \ line[%l]
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -250,16 +255,16 @@ autocmd BufWrite *.coffee :call DeleteTrailingWS()
 " => vimgrep searching and cope displaying
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " When you press gv you vimgrep after the selected text
-vnoremap <silent> gv :call VisualSelection('gv')<CR>
+" vnoremap <silent> gv :call VisualSelection('gv')<CR>
 
 " Open vimgrep and put the cursor in the right position
-map <leader>g :vimgrep // **/*.<left><left><left><left><left><left><left>
+" map <leader>g :vimgrep // **/*.<left><left><left><left><left><left><left>
 
 " Vimgreps in the current file
-map <leader><space> :vimgrep // <C-R>%<C-A><right><right><right><right><right><right><right><right><right>
+" map <leader><space> :vimgrep // <C-R>%<C-A><right><right><right><right><right><right><right><right><right>
 
 " When you press <leader>r you can search and replace the selected text
-vnoremap <silent> <leader>r :call VisualSelection('replace')<CR>
+" vnoremap <silent> <leader>r :call VisualSelection('replace')<CR>
 
 " Do :help cope if you are unsure what cope is. It's super useful!
 "
@@ -298,7 +303,7 @@ map <leader>s? z=
 noremap <Leader>m mmHmt:%s/<C-V><cr>//ge<cr>'tzt'm
 
 " Quickly open a buffer for scripbble
-map <leader>q :e ~/buffer<cr>
+" map <leader>q :e ~/buffer<cr>
 
 " Toggle paste mode on and off
 map <leader>pp :setlocal paste!<cr>
@@ -364,6 +369,15 @@ function! <SID>BufcloseCloseIt()
      execute("bdelete! ".l:currentBufNum)
    endif
 endfunction
-" Opening NERDTree with Ctrl+n
-map <C-n> :NERDTreeToggle<CR>
+" Opening NERDTree with F7
+nmap <F7> :NERDTreeToggle<CR>
+" Opening Tagbar with F8
+nmap <F8> :TagbarToggle<CR>
+" Syntastic
+let g:syntastic_check_on_open=1
+let g:syntastic_error_symbol='✗'
+let g:syntastic_warning_symbol='⚠'
+let g:syntastic_auto_loc_list=1
+let g:syntastic_loc_list_height=5
+let g:syntastic_stl_format = '%E{%eErr[%fe]}%B{, }%W{%wWarn[%fw]}'
 

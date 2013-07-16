@@ -501,4 +501,15 @@ call HL('VimBracket', 'dress', '', 'none')
 " }}}
 
 " }}}
+" Define groups required by TagHighlight
+let ColourAssignment = {}
+let ColourAssignment['Class']           = {"GUIFG": 'Purple',      "TERM":  'Underline'}
+let ColourAssignment['DefinedName']     = {"GUIFG": '#ee82ee',     "TERM":    'Underline'}
+let ColourAssignment['EnumerationValue']= {"GUIFG": '#c000c0'}
+let ColourAssignment['EnumerationName'] = {"GUIFG": '#ff22ff',     "TERM":  'Underline'}
+let ColourAssignment['Member']          = {"GUIFG": 'DarkGrey',    "TERM":    'Underline'}
+let ColourAssignment['Union']           = {"GUIFG": 'Grey',        "TERM":    'Underline'}
+let ColourAssignment['GlobalVariable']  = {"GUIFG": '#666600',     "CTERMFG": 'Cyan',      "TERM":  'Underline'}
+let ColourAssignment['LocalVariable']   = {"GUIFG": '#aaa14c',     "CTERMFG": 'Cyan'}
+let ColourAssignment['GlobalConstant']  = {"GUIFG": '#bbbb00',     "CTERMFG": 'Yellow',      "TERM":  'Underline'}
 
