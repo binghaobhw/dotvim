@@ -1,3 +1,6 @@
+#Checkout
+
+  `git clone --recurse-submodules git@github.com:scorpio147wbh/dotvim.git`
 #Create symbolic links
 
   `ln -s ~/.vim/vimrc ~/.vimrc`
