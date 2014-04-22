@@ -94,7 +94,7 @@ set tm=1000
 " Enable syntax highlighting
 syntax enable
 set background=dark
-set t_Co=256
+" set t_Co=256
 " Set extra options when running in GUI mode
 if has("gui_running")
 	" colorscheme solarized
@@ -106,7 +106,7 @@ if has("gui_running")
     " Number of colors
     set guitablabel=%M\ %t
 else
-	colorscheme darkburn
+	colorscheme noctu
 endif
 
 " Set utf8 as standard encoding and en_US as the standard language
@@ -148,6 +148,8 @@ set textwidth=500
 set autoindent "Auto indent
 set smartindent "Smart indent
 set wrap "Wrap lines
+set foldmethod=indent
+set foldlevelstart=20
 
 
 """"""""""""""""""""""""""""""
