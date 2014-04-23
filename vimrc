@@ -210,7 +210,7 @@ set viminfo^=%
 set laststatus=2
 
 " Format the status line
-set statusline=%{HasPaste()}%F%m%r%h\ %w\ \%{getcwd()}\ \ %{fugitive#statusline()}\ \ line[%l]
+set statusline=%{HasPaste()}%F%m%r%h\ %w\ \%{getcwd()}\ line[%l]
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -364,11 +364,3 @@ endfunction
 nmap <F7> :NERDTreeToggle<CR>
 " Opening Tagbar with F8
 nmap <F8> :TagbarToggle<CR>
-" Syntastic
-let g:syntastic_check_on_open=1
-let g:syntastic_error_symbol='✗'
-let g:syntastic_warning_symbol='⚠'
-let g:syntastic_auto_loc_list=1
-let g:syntastic_loc_list_height=5
-let g:syntastic_stl_format = '%E{%eErr[%fe]}%B{, }%W{%wWarn[%fw]}'
-
