@@ -30,7 +30,7 @@ hi SpellRare           ctermfg=11    ctermbg=NONE  cterm=underline
 hi SpellLocal          ctermfg=13    ctermbg=NONE  cterm=underline
 hi NonText             ctermfg=8
 hi LineNr              ctermfg=8     ctermbg=0
-hi Visual              ctermfg=0     ctermbg=12
+hi Visual              ctermfg=15     ctermbg=8
 hi IncSearch           ctermfg=0     ctermbg=10    cterm=NONE
 hi Search              ctermfg=0     ctermbg=14
 hi StatusLine          ctermfg=7     ctermbg=5     cterm=bold
