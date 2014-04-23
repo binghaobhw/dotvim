@@ -94,7 +94,7 @@ set tm=1000
 " Enable syntax highlighting
 syntax enable
 set background=dark
-" colorscheme base16-twilight
+" colorscheme base16-tomorrow
 colorscheme noctu
 
 " Set utf8 as standard encoding and en_US as the standard language
