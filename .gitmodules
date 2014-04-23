@@ -22,6 +22,9 @@
 [submodule "bundle/vim-project"]
 	path = bundle/vim-project
 	url = https://github.com/shemerey/vim-project.git
-[submodule "bundle\\noctu"]
-	path = bundle\\noctu
+[submodule "bundle/noctu"]
+	path = bundle/noctu
 	url = https://github.com/noahfrederick/vim-noctu.git
+[submodule "bundle\\vim-colors-solarized"]
+	path = bundle\\vim-colors-solarized
+	url = git://github.com/altercation/vim-colors-solarized.git

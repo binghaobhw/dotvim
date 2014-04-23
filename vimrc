@@ -94,20 +94,7 @@ set tm=1000
 " Enable syntax highlighting
 syntax enable
 set background=dark
-" set t_Co=256
-" Set extra options when running in GUI mode
-if has("gui_running")
-	" colorscheme solarized
-	colorscheme badwolf
-    " Exclude toolbar
-    set guioptions-=T
-    " Add tab pages
-    set guioptions+=e
-    " Number of colors
-    set guitablabel=%M\ %t
-else
-	colorscheme noctu
-endif
+colorscheme noctu
 
 " Set utf8 as standard encoding and en_US as the standard language
 set encoding=utf8
