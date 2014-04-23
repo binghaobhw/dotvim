@@ -29,11 +29,11 @@ hi SpellCap            ctermfg=10    ctermbg=NONE  cterm=underline
 hi SpellRare           ctermfg=11    ctermbg=NONE  cterm=underline
 hi SpellLocal          ctermfg=13    ctermbg=NONE  cterm=underline
 hi NonText             ctermfg=8
-hi LineNr              ctermfg=8     ctermbg=0
+hi LineNr              ctermfg=7     ctermbg=0
 hi Visual              ctermfg=15     ctermbg=8
-hi IncSearch           ctermfg=0     ctermbg=10    cterm=NONE
-hi Search              ctermfg=0     ctermbg=14
-hi StatusLine          ctermfg=7     ctermbg=5     cterm=bold
+hi IncSearch           ctermfg=0     ctermbg=7    cterm=NONE
+hi Search              ctermfg=4     ctermbg=15
+hi StatusLine          ctermfg=7     ctermbg=8     cterm=bold
 hi StatusLineNC        ctermfg=8     ctermbg=0     cterm=bold
 hi VertSplit           ctermfg=0     ctermbg=0
 hi TabLine             ctermfg=8     ctermbg=0     cterm=NONE
