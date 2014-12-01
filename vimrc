@@ -97,6 +97,7 @@ syntax enable
 set background=dark
 " colorscheme base16-tomorrow
 " colorscheme noctu
+colorscheme seoul256
 
 " Set utf8 as standard encoding and en_US as the standard language
 set encoding=utf8
@@ -212,7 +213,18 @@ set viminfo^=%
 set laststatus=2
 
 " Format the status line
-set statusline=%{HasPaste()}%F%m%r%h\ %w\ \%{getcwd()}\ line[%l]
+"set statusline=%{HasPaste()}%F%m%r%h\ %w\ \%{getcwd()}\ line[%l]
+set statusline=%t       "tail of the filename
+set statusline+=[%{strlen(&fenc)?&fenc:'none'}, "file encoding
+set statusline+=%{&ff}] "file format
+set statusline+=%h      "help file flag
+set statusline+=%m      "modified flag
+set statusline+=%r      "read only flag
+set statusline+=%y      "filetype
+set statusline+=%=      "left/right separator
+set statusline+=%c,     "cursor column
+set statusline+=%l/%L   "cursor line/total lines
+set statusline+=\ %P    "percent through file
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
