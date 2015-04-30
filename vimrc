@@ -27,6 +27,7 @@ Plugin 'gmarik/Vundle.vim'
 " Plugin 'user/L9', {'name': 'newL9'}
 Plugin 'junegunn/seoul256.vim'
 Plugin 'oplatek/Conque-Shell'
+Plugin 'bling/vim-airline'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -248,22 +249,24 @@ set viminfo^=%
 """"""""""""""""""""""""""""""
 " => Status line
 """"""""""""""""""""""""""""""
+" vim-airline status line
+let g:airline_theme="bubblegum"
 " Always show the status line
 set laststatus=2
 
 " Format the status line
 "set statusline=%{HasPaste()}%F%m%r%h\ %w\ \%{getcwd()}\ line[%l]
-set statusline=%t       "tail of the filename
-set statusline+=[%{strlen(&fenc)?&fenc:'none'}, "file encoding
-set statusline+=%{&ff}] "file format
-set statusline+=%h      "help file flag
-set statusline+=%m      "modified flag
-set statusline+=%r      "read only flag
-set statusline+=%y      "filetype
-set statusline+=%=      "left/right separator
-set statusline+=%c,     "cursor column
-set statusline+=%l/%L   "cursor line/total lines
-set statusline+=\ %P    "percent through file
+" set statusline=%t       "tail of the filename
+" set statusline+=[%{strlen(&fenc)?&fenc:'none'}, "file encoding
+" set statusline+=%{&ff}] "file format
+" set statusline+=%h      "help file flag
+" set statusline+=%m      "modified flag
+" set statusline+=%r      "read only flag
+" set statusline+=%y      "filetype
+" set statusline+=%=      "left/right separator
+" set statusline+=%c,     "cursor column
+" set statusline+=%l/%L   "cursor line/total lines
+" set statusline+=\ %P    "percent through file
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
