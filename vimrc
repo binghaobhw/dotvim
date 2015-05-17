@@ -105,10 +105,10 @@ set ignorecase
 set smartcase
 
 " Highlight search results
-set hlsearch
+" set hlsearch
 
 " Makes search act like search in modern browsers
-set incsearch
+" set incsearch
 
 " Don't redraw while executing macros (good performance config)
 set lazyredraw
@@ -180,6 +180,10 @@ set smartindent "Smart indent
 set wrap "Wrap lines
 set foldmethod=indent
 set foldlevelstart=20
+
+" Show whitespace characters
+set list
+set listchars=tab:>-,trail:·
 
 
 """"""""""""""""""""""""""""""
