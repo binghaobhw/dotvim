@@ -46,14 +46,8 @@ filetype plugin indent on    " required
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => General
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Be improved
-set nocompatible
 " Sets how many lines of history VIM has to remember
 set history=2000
-
-" Enable filetype plugins
-filetype plugin on
-filetype indent on
 
 " Set to auto read when a file is changed from the outside
 set autoread
@@ -185,6 +179,8 @@ set foldlevelstart=20
 set list
 set listchars=tab:>-,trail:·
 
+" Wrap commit message bodies at 72 characters per line
+autocmd Filetype gitcommit setlocal textwidth=72
 
 """"""""""""""""""""""""""""""
 " => Visual mode related
