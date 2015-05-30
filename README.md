@@ -1,6 +1,7 @@
-#Checkout
+##Installation
 
-  `git clone git@github.com:scorpio147wbh/dotvim.git`
-#Create symbolic links
-
-  `ln -s ~/.vim/vimrc ~/.vimrc`
+```bash
+cd
+git clone git@github.com:scorpio147wbh/dotvim.git .vim
+ln -s ~/.vim/vimrc ~/.vimrc
+```
