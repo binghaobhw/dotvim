@@ -252,6 +252,7 @@ set viminfo^=%
 """"""""""""""""""""""""""""""
 " vim-airline status line
 let g:airline_theme="bubblegum"
+let g:airline#extensions#tabline#enabled = 1
 " Always show the status line
 set laststatus=2
 
