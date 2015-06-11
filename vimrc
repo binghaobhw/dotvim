@@ -28,6 +28,7 @@ Plugin 'gmarik/Vundle.vim'
 Plugin 'junegunn/seoul256.vim'
 Plugin 'oplatek/Conque-Shell'
 Plugin 'bling/vim-airline'
+Plugin 'mileszs/ack.vim'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
