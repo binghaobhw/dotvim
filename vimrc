@@ -26,7 +26,6 @@ Plugin 'gmarik/Vundle.vim'
 " Avoid a name conflict with L9
 " Plugin 'user/L9', {'name': 'newL9'}
 Plugin 'junegunn/seoul256.vim'
-Plugin 'oplatek/Conque-Shell'
 Plugin 'bling/vim-airline'
 Plugin 'mileszs/ack.vim'
 
