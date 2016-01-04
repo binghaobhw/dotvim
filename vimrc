@@ -182,6 +182,9 @@ set listchars=tab:>-,trail:·
 " Wrap commit message bodies at 72 characters per line
 autocmd Filetype gitcommit setlocal textwidth=72
 
+" Different indentation for different filetype
+autocmd Filetype yaml setlocal shiftwidth=2 tabstop=2
+
 """"""""""""""""""""""""""""""
 " => Visual mode related
 """"""""""""""""""""""""""""""
