@@ -183,7 +183,7 @@ set listchars=tab:>-,trail:·
 autocmd Filetype gitcommit setlocal textwidth=72
 
 " Different indentation for different filetype
-autocmd Filetype yaml setlocal shiftwidth=2 tabstop=2
+autocmd Filetype yaml,ruby setlocal shiftwidth=2 tabstop=2
 
 """"""""""""""""""""""""""""""
 " => Visual mode related
