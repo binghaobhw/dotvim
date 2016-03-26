@@ -28,6 +28,7 @@ Plugin 'tpope/vim-fugitive'
 Plugin 'junegunn/seoul256.vim'
 Plugin 'bling/vim-airline'
 Plugin 'mileszs/ack.vim'
+Plugin 'cespare/vim-toml'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
