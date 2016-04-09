@@ -29,6 +29,7 @@ Plugin 'junegunn/seoul256.vim'
 Plugin 'bling/vim-airline'
 Plugin 'mileszs/ack.vim'
 Plugin 'cespare/vim-toml'
+Plugin 'scrooloose/syntastic'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -424,3 +425,17 @@ endfunction
 " nmap <F7> :NERDTreeToggle<CR>
 " Opening Tagbar with F8
 " nmap <F8> :TagbarToggle<CR>
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Syntastic
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+" the error window will be automatically opened when errors are
+" detected, but not closed automatically
+let g:syntastic_auto_loc_list = 3
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_check_on_wq = 0
+let g:syntastic_enable_balloons = 0
